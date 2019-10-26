@@ -14,7 +14,7 @@ import java.util.Date;
 /**
  * Implementation of App Widget functionality.
  */
-public class MyWidget extends AppWidgetProvider {
+public class WidgetNew extends AppWidgetProvider {
     private static final String mSharedPrefFile = "com.example.appwidegt";
     private static final   String COUNT_KEY = "count";
 
@@ -29,14 +29,14 @@ public class MyWidget extends AppWidgetProvider {
 
         // CharSequence widgetText = context.getString(R.string.appwidget_text);
         // Construct the RemoteViews object
-        RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget_kotlin);
+        RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget_new);
         views.setTextViewText(R.id.appwidget_id, String.valueOf(appWidgetId));
         views.setTextViewText(R.id.appwidget_update,context.getResources().getString(R.string.date_count_format,count,dateString));
 
         SharedPreferences.Editor prefEditor = preferences.edit();
         prefEditor.putInt(COUNT_KEY + appWidgetId,count);
         prefEditor.apply();
-        Intent intentUpdate = new Intent(context,MyWidget.class);
+        Intent intentUpdate = new Intent(context,WidgetNew.class);
         intentUpdate.setAction(AppWidgetManager.ACTION_APPWIDGET_UPDATE);
         int[] idArray = new int[]{appWidgetId};
         intentUpdate.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS,idArray);
@@ -65,5 +65,4 @@ public class MyWidget extends AppWidgetProvider {
 //        // Enter relevant functionality for when the last widget is disabled
 //    }
 }
-
 

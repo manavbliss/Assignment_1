@@ -1,7 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradientbackground"
+    android:background="#009688"
     android:padding="@dimen/widget_margin">
 
     <LinearLayout
@@ -40,15 +40,14 @@
         android:layout_below="@+id/section_id"
         android:orientation="vertical"
         style="@style/AppWidgetSection" >
-
         <TextView
             android:id="@+id/appwidget_update_label"
 
-            style="@style/AppWidgetLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="2dp"
-            android:text="Current Location">
+            android:text="Last Updated"
+            style="@style/AppWidgetLabel">
 
         </TextView>
         <TextView
@@ -60,15 +59,14 @@
             style="@style/AppWidgetText"/>
 
     </LinearLayout>
-
     <Button
         android:id="@+id/button_update"
-        style="@style/AppWidgetButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/section_update"
+        android:text="Update Now"
 
-        android:text="Fetch Location">
+        style="@style/AppWidgetButton">
 
     </Button>
 
