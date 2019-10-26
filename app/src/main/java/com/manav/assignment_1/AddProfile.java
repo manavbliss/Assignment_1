@@ -70,7 +70,7 @@ public class AddProfile extends AppCompatActivity implements
         setContentView(R.layout.activity_add_profile);
         //ButterKnife.bind(this);
         mCompressor = new FileCompressor(this);
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         textview_location = findViewById(R.id.locationTV);
         btn_location =findViewById(R.id.checkBox);
         imageViewProfilePic =findViewById(R.id.imageViewProfilePic);
