@@ -15,7 +15,7 @@ import java.util.Date;
  * Implementation of App Widget functionality.
  */
 public class WidgetNew extends AppWidgetProvider {
-    private static final String mSharedPrefFile = "com.example.appwidegt";
+    private static final String mSharedPrefFile = "com.manav.assignment_1";
     private static final   String COUNT_KEY = "count";
 
 
