@@ -23,7 +23,7 @@ public class FetchAddessTask extends AsyncTask<Location, Void, String> {
         void onTaskCompleted(String result);
     }
 
-    FetchAddessTask(WidgetKotlin applicationContext, OnTaskCompleted listener){
+    FetchAddessTask(AddProfile applicationContext, OnTaskCompleted listener){
         mContext = applicationContext;
         mListener = listener;
     }
